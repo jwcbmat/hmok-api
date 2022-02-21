@@ -8,6 +8,6 @@ router.get('/posts', (req, res) => {
         author: "hmok server"
     }
     )
-})
+});
 
 module.exports = router;
