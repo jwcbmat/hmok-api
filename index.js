@@ -1,7 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const rotes = require('./rotes');
-const clientData = require('./database');
 
 
 const app = express();
