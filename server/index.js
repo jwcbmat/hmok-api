@@ -1,12 +1,8 @@
 const express = require('express');
-const bodyParser = require('body-parser');
-const rotes = require('./rotes');
+const routes = require('./route');
 
 
-const app = express();
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+const app = express();;
 
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -21,7 +17,7 @@ app.get('/', (req, res) => {
   res.send('funcionando');
 });
 
-app.use('/api', rotes);
+app.use('/', routes);
 
 const port = 3001;
 
