@@ -13,8 +13,9 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.get('/', (req, res) => {
-  res.send('funcionando');
+app.get('/', async (req, res) => {
+  const startPosts = await postService.getStartPosts();
+  res.send(startPosts);
 });
 
 app.use('/', routes);

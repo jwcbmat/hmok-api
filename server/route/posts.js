@@ -3,7 +3,7 @@ const router = express.Router();
 const postsService = require('../service/postService');
 
 router.get('/posts', async function (req, res) {
-    const posts = await postsService.getPosts();
+    const posts = await posService.getPosts();
     res.json(posts);
 });
 
